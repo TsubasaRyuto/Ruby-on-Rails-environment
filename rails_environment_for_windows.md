@@ -54,7 +54,7 @@ https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html
 こちらのサイトからPuTTyのインストラー（Package file: putty-arm64-0.72-installer.msi）をダウンロードし
 PuTTyをインストールする
 
-### PuTTyの起動と仮想マシンへのログイン
+### PuTTyで仮想マシンに接続
 PuTTyを起動する
 起動したら、接続先の設定をする
 ```
@@ -72,86 +72,29 @@ password: vagrant
 passwordを入力際の注意点：　入力しても文字が出てくることはないです。注意しましょう。
 
 ここまでで無事PuTTyを起動し、仮想マシンにログインすることができました。
-## Rubyのインストール
-```:ターミナル
-rbenv install 2.6.3
+
+## CyberDuckで仮想マシンに接続し、構造を確認
+### CyberDuckのインストール
+https://cyberduck.io/download/
+こちらのサイトよりインストラー（Cyberduck for windows）をダウンロードする
+ダウンロードが完了したら、インストラーを開いてCyberDuckをインストールする
+
+### CyberDuckの設定
+参考動画：　https://dotinstall.com/lessons/basic_localdev_win_v2/38609
+CyberDuckを起動する
+起動したら、編集メニューの環境設定を選択
+
+ブラウザの設定
+```
+'.'で始まるファイルを表示をチェック
+ダブルクリックしたファイルを外部エディタで開くをチェック
 ```
 
-## Rubyのバージョン切り替え
-```:ターミナル
-$ rbenv global 2.6.3
-$ rbenv rehash
-$ ruby -v
-> ruby 2.6.3 // (ruby globalで指定した数字が表示されていれば成功です)
-$ gem -v
-> 3.0.1 // ここは3.0.1とは限りません。その時の最新バージョンが表示されます
+外部エディタの設定
 ```
-
-## bundlerインストール
-```:ターミナル
-$ gem install bundler
-$ bundle -v
-> Bundler version 2.0.2 // ここは2.0.2とは限りません。その時の最新バージョンが表示されます
+外部エディタをAtomに設定
 ```
+設定が終わったら再起動
 
-## Railsインストール
-ここまで、学習をしてきた方はおそらくworksapceフォルダはあると思いますが、ない場合は適当な場所にworkspaceを作成
-
-### ターミナル上でディレクトリの作成と移動
-```:ターミナル
-$ ls ~/
-
-workspaceディレクトリがない場合
-$ mkdir ~/workspace
-
-workspaceディレクトリがある場合（上記でworkspaceディレクトリを作成した場合も)
-$ cd ~/workspace
-
-$ mkdir rails_practice
-$ cd rails_practice
-$ mkdir first_app
-$ cd first_app
-```
-* mkdirコマンドは `make directory` の略で、文字の通りディレクトリの作成
-* lsコマンドは `list` の略で、指定したディレクトリ内のファイルやディレクトリの一覧を表示する
-* cdコマンドは `change directory`の略で、指定したディレクトリへ移動
-
-### bundle init
-```:ターミナル
-$ bundle init
-> Writing new Gemfile to /Users/*****/workspace/rails_practice/first_app/Gemfile
-```
-
-### できあがったGemfileのRailsのコメントアウトを外す
-Atom(テキストエディタ)でwokspace/rails_practice/first_app/フォルダーを開き、Gemfileを開く
-```:Gemfile
-source "https://rubygems.org"
-
-gem "rails"
-```
-
-### Railsのインストール
-``` :ターミナル
-$ bundle install --path vendor/bundle
-Fetching gem metadata from https://rubygems.org/...........
-```
-
-###  Railsアプリの作成
-```
-$ bundle exec rails new .
-聞かれたやつは全部 `y` 
-```
-
-### ライブラリーのインストール
-```
-$ bundle install --path vendor/bundle
-Fetching gem metadata from https://rubygems.org/...........
-```
-
-### Railsアプリケーションの起動
-```
-$ rails s
-```
-ブラウザで http://localhost:3000 にアクセスして、
-https://railsguides.jp/railsguides/images/getting_started/rails_welcome.png
-このような画面になれば成功です。
+### CyberDuckで仮想マシンに接続
+新規接続を選択
