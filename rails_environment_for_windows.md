@@ -235,9 +235,9 @@ Fetching gem metadata from https://rubygems.org/...........
 
 ### Railsアプリケーションの起動
 ```
-$ rails s -b 192.168.33.10
+$ bin/rails s -b 192.168.33.10
 ```
-ブラウザで http://localhost:3000 にアクセスして、 https://railsguides.jp/railsguides/images/getting_started/rails_welcome.png このような画面になれば成功です。
+ブラウザで `http://192.168.33.10:3000` にアクセスして、 https://railsguides.jp/railsguides/images/getting_started/rails_welcome.png このような画面になれば成功です。
 
 
 
