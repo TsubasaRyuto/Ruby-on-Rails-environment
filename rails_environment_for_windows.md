@@ -114,6 +114,117 @@ https://cyberduck.io/download/
 
 こうすることで、次回からは簡単に接続できるようになります。
 
+## 仮想環境にRubyインストール
+### Gitのインストール
+```:仮想マシーン（PuTTy）
+$ sudo apt-get -y install git
+```
+gitがインストールされたか確認
+```
+$ git --version
+```
+
+### rbenvのインストール
+rbenvをgitからclone
+```:仮想マシーン（PuTTy）
+$ git clone https://github.com/sstephenson/rbenv.git ~/.rbenv
+```
+bash_profileに記載する(以下のコマンド実行することで記載されます)
+```:仮想マシーン（PuTTy）
+$ echo 'eval "$(rbenv init -)"' >> ~/.bash_profile
+$ exec $SHELL -l
+```
+rbenvがインストールされているかを確認する
+```:仮想マシーン（PuTTy）
+$ rbenv -v
+```
+
+### ruby-buildのインストール
+ruby-buildとは、rubyをインストールするためのrbenvのプラグイン。
+ruby-buildをgitからclone。
+```:仮想マシーン（PuTTy）
+$ git clone https://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
+```
+
+### Rubyのインストール
+```
+$ rbenv install 2.6.3
+```
+
+### Rubyのバージョン切り替え
+```
+$ rbenv global 2.6.3
+$ rbenv rehash
+$ ruby -v
+> ruby 2.6.3 // (ruby globalで指定した数字が表示されていれば成功です)
+$ gem -v
+> 3.0.1 // ここは3.0.1とは限りません。その時の最新バージョンが表示されます
+```
+
+### bundlerインストール
+```
+$ gem install bundler
+$ bundle -v
+> Bundler version 2.0.2 // ここは2.0.2とは限りません。その時の最新バージョンが表示されます
+```
+
+## Node.jsのインストール
+JavaScriptのエンジンが必要なのでNode.jsをインストールします
+```
+$ sudo apt-get install nodejs
+```
+
+## Railsインストール
+### ターミナル上でディレクトリの作成と移動
+```
+$ mkdir ~/workspace
+$ cd ~/workspace
+$ mkdir rails_practice
+$ cd rails_practice
+$ mkdir first_app
+$ cd first_app
+```
+* mkdirコマンドは `make directory` の略で、文字の通りディレクトリの作成
+* lsコマンドは `list` の略で、指定したディレクトリ内のファイルやディレクトリの一覧を表示する
+* cdコマンドは `change directory` の略で、指定したディレクトリへ移動
+
+### bundle init
+```
+$ bundle init
+> Writing new Gemfile to /Users/*****/workspace/rails_practice/first_app/Gemfile
+```
+
+### できあがったGemfileのRailsのコメントアウトを外す
+Atom(テキストエディタ)でwokspace/rails_practice/first_app/フォルダーを開き、Gemfileを開く
+```
+source "https://rubygems.org"
+
+gem "rails"
+```
+
+### Railsのインストール
+```
+$ bundle install --path vendor/bundle
+Fetching gem metadata from https://rubygems.org/...........
+```
+
+### Railsアプリの作成
+```
+$ bundle exec rails new .
+聞かれたやつは全部 `y`
+```
+
+### ライブラリーのインストール
+```
+$ bundle install --path vendor/bundle
+Fetching gem metadata from https://rubygems.org/...........
+```
+
+### Railsアプリケーションの起動
+```
+$ rails s -b 192.168.33.10
+```
+ブラウザで http://localhost:3000 にアクセスして、 https://railsguides.jp/railsguides/images/getting_started/rails_welcome.png このような画面になれば成功です。
 
 
 
