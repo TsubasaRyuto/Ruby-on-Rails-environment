@@ -148,8 +148,10 @@ $ git clone https://github.com/sstephenson/rbenv.git ~/.rbenv
 ```
 bash_profileに記載する(以下のコマンド実行することで記載されます)
 ```:仮想マシーン（PuTTy）
+$ echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bash_profile
 $ echo 'eval "$(rbenv init -)"' >> ~/.bash_profile
-$ exec $SHELL -l
+$ source ~/.bash_profile
+$ rbenv --version
 ```
 rbenvがインストールされているかを確認する
 ```:仮想マシーン（PuTTy）
