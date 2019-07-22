@@ -114,6 +114,23 @@ https://cyberduck.io/download/
 
 こうすることで、次回からは簡単に接続できるようになります。
 
+## Railsを利用する上で必要なパッケージのインストール
+```
+$ sudo apt-get update
+$ sudo apt-get -y install curl 
+$ sudo apt-get -y install g++ 
+$ sudo apt-get -y install make
+$ sudo apt-get -y install zlib1g-dev
+$ sudo apt-get -y install libssl-dev
+$ sudo apt-get -y install libreadline-dev
+$ sudo apt-get -y install libyaml-dev
+$ sudo apt-get -y install libxml2-dev
+$ sudo apt-get -y install libxslt-dev
+$ sudo apt-get -y install sqlite3
+$ sudo apt-get -y install libsqlite3-dev
+$ sudo apt-get -y install nodejs
+```
+
 ## 仮想環境にRubyインストール
 ### Gitのインストール
 ```:仮想マシーン（PuTTy）
@@ -166,12 +183,6 @@ $ gem -v
 $ gem install bundler
 $ bundle -v
 > Bundler version 2.0.2 // ここは2.0.2とは限りません。その時の最新バージョンが表示されます
-```
-
-## Node.jsのインストール
-JavaScriptのエンジンが必要なのでNode.jsをインストールします
-```
-$ sudo apt-get install nodejs
 ```
 
 ## Railsインストール
