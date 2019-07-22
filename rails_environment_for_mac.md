@@ -1,24 +1,20 @@
 # 【Mac】Ruby on Rails環境構築
 
 ## Homebrewのインストール
-
-### やり方
-#### xcodeのインストール
+### xcodeのインストール
 App storeからXcodeをインストール
 
-#### コマンドライン・デベロッパーツールをインストール
-
+### コマンドライン・デベロッパーツールをインストール
 ```:ターミナル
 $ xcode-select --install
 > xcode-select: note: install requested for command line developer tools
 ```
 同時にポップアップが出てくるので"インストール"を選択し利用規約に同意
 
-#### Homebrewをインストール
+### Homebrewをインストール
 http://brew.sh/index_ja.html
 
-#### Homebrewインストール完了確認
-
+### Homebrewインストール完了確認
 ```:ターミナル
 $ brew doctor
 ```
@@ -26,7 +22,6 @@ $ brew doctor
 
 
 ## rbenvのインストール
-### やり方
 ```:ターミナル
 $ brew install rbenv
 $ brew install ruby-build
