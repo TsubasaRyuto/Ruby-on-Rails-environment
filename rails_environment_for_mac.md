@@ -120,7 +120,6 @@ Fetching gem metadata from https://rubygems.org/...........
 ```
 $ rails s
 ```
-http://localhost:3000 
-ブラウザでここにアクセスして、
+ブラウザで http://localhost:3000 にアクセスして、
 https://railsguides.jp/railsguides/images/getting_started/rails_welcome.png
 このような画面になれば成功です。
