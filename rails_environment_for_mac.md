@@ -66,10 +66,15 @@ $ bundle -v
 ここまで、学習をしてきた方はおそらくworksapceフォルダはあると思いますが、ない場合は適当な場所にworkspaceを作成
 
 ### ターミナル上でディレクトリの作成と移動
-```
+```:ターミナル
+$ ls ~/
+
+workspaceディレクトリがない場合
 $ mkdir ~/workspace
-$ ls ~/workspace
+
+workspaceディレクトリがある場合（上記でworkspaceディレクトリを作成した場合も)
 $ cd ~/workspace
+
 $ mkdir rails_practice
 $ cd rails_practice
 $ mkdir first_app
@@ -78,3 +83,45 @@ $ cd first_app
 * mkdirコマンドは `make directory` の略で、文字の通りディレクトリの作成
 * lsコマンドは `list` の略で、指定したディレクトリ内のファイルやディレクトリの一覧を表示する
 * cdコマンドは `change directory`の略で、指定したディレクトリへ移動
+
+### bundle init
+```:ターミナル
+$ bundle init
+> Writing new Gemfile to /Users/*****/workspace/rails_practice/first_app/Gemfile
+```
+
+### できあがったGemfileのRailsのコメントアウトを外す
+Atom(テキストエディタ)でwokspace/rails_practice/first_app/フォルダーを開き、Gemfileを開く
+```:Gemfile
+source "https://rubygems.org"
+
+gem "rails"
+```
+
+### Railsのインストール
+``` :ターミナル
+$ bundle install --path vendor/bundle
+Fetching gem metadata from https://rubygems.org/...........
+```
+
+###  Railsアプリの作成
+```
+$ bundle exec rails new .
+聞かれたやつは全部 `y` 
+```
+
+### ライブラリーのインストール
+```
+$ bundle install --path vendor/bundle
+Fetching gem metadata from https://rubygems.org/...........
+```
+
+### Railsアプリケーションの起動
+```
+$ rails s
+
+```
+http://localhost:3000 
+ブラウザでここにアクセスして、
+https://railsguides.jp/railsguides/images/getting_started/rails_welcome.png
+このような画面になれば成功です。
