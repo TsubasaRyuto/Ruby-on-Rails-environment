@@ -119,7 +119,6 @@ Fetching gem metadata from https://rubygems.org/...........
 ### Railsアプリケーションの起動
 ```
 $ rails s
-
 ```
 http://localhost:3000 
 ブラウザでここにアクセスして、
