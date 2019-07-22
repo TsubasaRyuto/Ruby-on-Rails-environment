@@ -12,7 +12,7 @@ $ vagrant -v
 
 ## VirtualBoxインストール
 https://www.virtualbox.org/wiki/Downloads
-こちらのサイトからインストール
+こちらのサイトからインストラーをダウンロード後、VirtualBoxをインストールする
 
 ## LinuxOSの仮想環境構築
 PowerShellにて、Dドライブ直下にVagrant専用フォルダを作成し、その中に仮想マシンようのフォルダを作成し移動します。
