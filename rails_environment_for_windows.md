@@ -54,18 +54,24 @@ https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html
 こちらのサイトからPuTTyのインストラー（Package file: putty-arm64-0.72-installer.msi）をダウンロードし
 PuTTyをインストールする
 
-### PuTTyの起動と設定
+### PuTTyの起動と仮想マシンへのログイン
 PuTTyを起動する
 起動したら、接続先の設定をする
-
-
-
-bash_profileに記載する(以下のコマンド実行することで記載されます)
-```:ターミナル
-$ echo 'eval "$(rbenv init -)"' >> ~/.bash_profile
-$ source ~/.bash_profile
 ```
+接続先ホスト名： 192.168.33.10
+接続先ポート： 22
+コネクションタイプ：　SSH
+```
+PuTTy Security Alertが出てくると思うので、「はい（yes）」をクリックする
 
+起動する際に、vagrantのユーザー名（login as:）とパスワード（password:）が聞かれるので、入力してenter（return）を押す
+```
+user_name: vagrant
+password: vagrant
+```
+passwordを入力際の注意点：　入力しても文字が出てくることはないです。注意しましょう。
+
+ここまでで無事PuTTyを起動し、仮想マシンにログインすることができました。
 ## Rubyのインストール
 ```:ターミナル
 rbenv install 2.6.3
