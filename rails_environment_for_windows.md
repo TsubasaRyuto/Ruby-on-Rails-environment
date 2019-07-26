@@ -17,8 +17,8 @@ https://www.virtualbox.org/wiki/Downloads
 ## LinuxOSの仮想環境構築
 PowerShellにて、Dドライブ直下にVagrant専用フォルダを作成し、その中に仮想マシンようのフォルダを作成し移動します。
 ```:ps 
-$ mkdir C:\Vagrant
-$ cd C:\Vagrant
+$ mkdir D:\Vagrant
+$ cd D:\Vagrant
 $ mkdir ubuntu64
 $ cd ubuntu64
 ```
