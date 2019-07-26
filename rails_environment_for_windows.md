@@ -80,6 +80,8 @@ https://cyberduck.io/download/
 ダウンロードが完了したら、インストラーを開いてCyberDuckをインストールする
 
 ### CyberDuckの設定
+参考動画をご覧になる際は、「CyberDuckのインストール」のみにしてください。
+続けて、ドットインストールを参考にしてしまうと、途中でうまくいかなくなる可能性がございます。
 参考動画：　https://dotinstall.com/lessons/basic_localdev_win_v2/38609
 
 1. CyberDuckを起動する
