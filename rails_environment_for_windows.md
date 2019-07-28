@@ -15,15 +15,14 @@ https://www.virtualbox.org/wiki/Downloads
 こちらのサイトからインストラーをダウンロード後、VirtualBoxをインストールする
 
 ## LinuxOSの仮想環境構築
-PowerShellにて、Dドライブ直下にVagrant専用フォルダを作成し、その中に仮想マシンようのフォルダを作成し移動します。
+PowerShellにて、Vagrant専用フォルダを作成し、その中に仮想マシンようのフォルダを作成し移動します。
 ```:ps 
-$ mkdir D:\Vagrant
-$ cd D:\Vagrant
+$ cd　
 $ mkdir ubuntu64
 $ cd ubuntu64
 ```
 * mkdirコマンドは `make directory` の略で、文字の通りディレクトリの作成
-* cdコマンドは `change directory`の略で、指定したディレクトリへ移動
+* cdコマンドは `change directory`の略で、指定したディレクトリへ移動（directoryを指定がない場合トップディレクトリに移動）
 
 ### Vagrant初期化
 Boxを追加しUbuntuOSで初期化します
