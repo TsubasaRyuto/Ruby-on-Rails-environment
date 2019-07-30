@@ -171,7 +171,7 @@ $ git clone https://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-
 ```
 $ rbenv install 2.6.3
 ```
-
+> errorが出たら　`RUBY_CONFIGURE_OPTS=--disable-install-doc rbenv install 2.6.3`
 ### Rubyのバージョン切り替え
 ```
 $ rbenv global 2.6.3
