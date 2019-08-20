@@ -113,7 +113,7 @@ Fetching gem metadata from https://rubygems.org/...........
 
 ### Railsアプリケーションの起動
 ```
-$ rails s
+$ bin/rails s
 ```
 ブラウザで http://localhost:3000 にアクセスして、
 https://railsguides.jp/railsguides/images/getting_started/rails_welcome.png
