@@ -214,7 +214,7 @@ Atom(テキストエディタ)でwokspace/rails_practice/first_app/フォルダ�
 ```
 source "https://rubygems.org"
 
-gem 'rails', '~> 5.2.2'
+gem 'rails', '~> 5.2.3'
 ```
 
 ### Railsのインストール
