@@ -90,7 +90,7 @@ Atom(テキストエディタ)でwokspace/rails_practice/first_app/フォルダ�
 ```:Gemfile
 source "https://rubygems.org"
 
-gem "rails"
+gem "rails, '~> 5.2.2'"
 ```
 
 ### Railsのインストール
