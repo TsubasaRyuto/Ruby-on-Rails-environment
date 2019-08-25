@@ -50,7 +50,7 @@ PuTTyは仮想マシンにSSH接続するためのツール
 
 ### PuTTyのインストール
 https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html
-こちらのサイトからPuTTyのインストラー（Package file: putty-arm64-0.72-installer.msi）をダウンロードし
+こちらのサイトからPuTTyのインストラー（Package file: putty-64bit-0.72-installer.msi）をダウンロードし
 PuTTyをインストールする
 
 ### PuTTyで仮想マシンに接続
