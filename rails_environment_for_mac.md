@@ -25,7 +25,7 @@ $ brew doctor
 ```:ターミナル
 $ brew install rbenv
 $ brew install ruby-build
-$ rbenv version
+$ rbenv --version
 2.2.3 (set by ******) // ここは2.2.3とは限りません。その時の最新バージョンが表示されます
 ```
 
