@@ -1,4 +1,4 @@
-# 【Mac】How to set up a Ruby on Rails development environment
+# 【Mac】How to set up Ruby on Rails development environment
 
 ## Install Homebrew
 ### Installing the Xcode
@@ -18,12 +18,12 @@ Please paste following script in a Terminal, and press Enter:
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
 
-#### Checking whether installed Homebrew
-Run the following command to check whether installed `Homebrew`.
+#### Checking whether `Homebrew` is installed
+Run the following command to check whether `homebrew` is installed.
 ``` :Terminal
 $ brew doctor
 ```
-It is success if it output 'Your system is ready to brew.'
+It is success if it outputs 'Your system is ready to brew.'
 
 
 ## Install Ruby
