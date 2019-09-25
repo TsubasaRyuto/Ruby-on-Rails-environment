@@ -34,47 +34,60 @@ Run the following command to install `rbenv`
 ``` :Terminal
 $ brew install rbenv
 ```
-Next, run the following command to check whether `rvenv` is installed.
-```
+Next, you have to check whether `rbenv` is installed.run the following command to check whether `rvenv` is installed.
+``` :Terminal
 $ rbenv --version
 2.2.3 (set by ******)  //  you will see latest version here at that time.
 ```
 
 ### Installing ruby-build
+ruby-build is plugin of rbenv provided `rbenv install` so that it install Ruby of different version.
+
 Run the following command to install `ruby-build`
-```
+``` :Terminal
 $ brew install ruby-build
 ```
 
-bash_profileに記載する(以下のコマンド実行することで記載されます)
-```:ターミナル
+### Output 'eval "$(rbenv init -)"' to the bash_profile
+Run the following command
+``` :Terminal
 $ echo 'eval "$(rbenv init -)"' >> ~/.bash_profile
 $ source ~/.bash_profile
 ```
 
-## Rubyのインストール
-```:ターミナル
+### Installing Ruby
+Run the following command to install 'Ruby' version 2.6.3.
+``` :Terminal
 rbenv install 2.6.3
 ```
 
-## Rubyのバージョン切り替え
-```:ターミナル
+### Change version of Ruby
+Run the following command to change version of 'Ruby'
+``` :Terminal
 $ rbenv global 2.6.3
 $ rbenv rehash
 $ ruby -v
-> ruby 2.6.3 // (ruby globalで指定した数字が表示されていれば成功です)
+> ruby 2.6.3 // (You success if you will see specified number at ruby global)
 $ gem -v
-> 3.0.1 // ここは3.0.1とは限りません。その時の最新バージョンが表示されます
+> 3.0.1
 ```
 
-## bundlerインストール
-```:ターミナル
+## Install bundler
+### Installing bundler
+Bundler provides a consistent environment for Ruby projects by tracking and installing the exact gems and versions that are needed.
+
+Run the following command to install bundler with gem
+``` :Terminal
 $ gem install bundler
-$ bundle -v
-> Bundler version 2.0.2 // ここは2.0.2とは限りません。その時の最新バージョンが表示されます
 ```
 
-## Railsインストール
+Also, you have to check installed bundler
+``` :Terminal
+$ bundle -v
+> Bundler version 2.0.2 // you will see latest version here at that time.
+```
+
+## Install Rubyh on Rails
 ここまで、学習をしてきた方はおそらくworksapceフォルダはあると思いますが、ない場合は適当な場所にworkspaceを作成
 
 ### ターミナル上でディレクトリの作成と移動
