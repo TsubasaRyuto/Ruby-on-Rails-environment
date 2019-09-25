@@ -88,63 +88,65 @@ $ bundle -v
 ```
 
 ## Install Rubyh on Rails
-ここまで、学習をしてきた方はおそらくworksapceフォルダはあると思いますが、ない場合は適当な場所にworkspaceを作成
-
-### ターミナル上でディレクトリの作成と移動
-```:ターミナル
+### Making a workspace direcotory and application directory
+``` :Terminal
 $ ls ~/
 
-workspaceディレクトリがない場合
+Run the following command if you don't exist workspace directory
 $ mkdir ~/workspace
 
-workspaceディレクトリがある場合（上記でworkspaceディレクトリを作成した場合も)
 $ cd ~/workspace
-
-$ mkdir rails_practice
-$ cd rails_practice
-$ mkdir first_app
+$ mkdir rails_practice // `rails_practice` is an example, so you must name a directory. 
+$ cd rails_practice 
+$ mkdir first_app  // `first_app` is an example, so you must name a directory.
 $ cd first_app
 ```
-* mkdirコマンドは `make directory` の略で、文字の通りディレクトリの作成
-* lsコマンドは `list` の略で、指定したディレクトリ内のファイルやディレクトリの一覧を表示する
-* cdコマンドは `change directory`の略で、指定したディレクトリへ移動
+> ## About linux command
+> * `mkdir` command - `make directory` -  you can make a new directory.
+> * `li` command -  `list` - you can see list of directory an file in the specified directory.
+> * `cd` command -  `change directory` - you can change the current directory to the specified directory.
 
 ### bundle init
-```:ターミナル
+Run the following command to generates a Gemfile into the current working directory
+``` :Terminal
 $ bundle init
 > Writing new Gemfile to /Users/*****/workspace/rails_practice/first_app/Gemfile
 ```
 
-### できあがったGemfileのRailsのコメントアウトを外す
-Atom(テキストエディタ)でwokspace/rails_practice/first_app/フォルダーを開き、Gemfileを開く
-```:Gemfile
+### Changing Gemfile
+Open the Gemfile with texteditor, and you should remove comment out `gem "rails"`. Also, you can specify the Rails versions.
+This example specified the rails version `5.2.3`.
+``` :Gemfile
 source "https://rubygems.org"
 
 gem 'rails', '~> 5.2.3'
 ```
 
-### Railsのインストール
-``` :ターミナル
+### Installing Ruby on Rails
+Run the following command to install Ruby on rails.
+``` :Terminal
 $ bundle install --path vendor/bundle
 Fetching gem metadata from https://rubygems.org/...........
 ```
 
-###  Railsアプリの作成
-```
+###  Generate Rails applications
+Run the following command to generate Rails application.
+``` :Terminal
 $ bundle exec rails new .
-聞かれたやつは全部 `y` 
+
 ```
 
-### ライブラリーのインストール
-```
+### Installing the libraries
+``` :Terminal
 $ bundle install --path vendor/bundle
 Fetching gem metadata from https://rubygems.org/...........
 ```
 
-### Railsアプリケーションの起動
-```
+### Start up Rails application
+``` :Terminal
 $ bin/rails s
 ```
-ブラウザで http://localhost:3000 にアクセスして、
+Next, you should access to `http://localhost:3000` with browser, and 
+you success if browser page show the following url's image.
 https://railsguides.jp/railsguides/images/getting_started/rails_welcome.png
-このような画面になれば成功です。
+
