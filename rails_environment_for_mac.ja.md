@@ -104,6 +104,30 @@ Fetching gem metadata from https://rubygems.org/...........
 $ bundle exec rails new .
 聞かれたやつは全部 `y` 
 ```
+上記のコマンドを実行すると、以下のようなエラーが発生すると思います。
+```
+Bundler could not find compatible versions for gem "sprockets":
+  In snapshot (Gemfile.lock):
+    sprockets (= 4.0.0)
+
+  In Gemfile:
+    sass-rails (~> 5.0) was resolved to 5.1.0, which depends on
+      sprockets (>= 2.8, < 4.0)
+
+    rails (~> 5.2.4, >= 5.2.4.1) was resolved to 5.2.4.1, which depends on
+      sprockets-rails (>= 2.0.0) was resolved to 3.2.1, which depends on
+        sprockets (>= 3.0.0)
+
+Running `bundle update` will rebuild your snapshot from scratch, using only
+the gems in your Gemfile, which may resolve the conflict.
+         run  bundle exec spring binstub --all
+bundler: command not found: spring
+Install missing gem executables with `bundle install
+```
+このエラーが発生した場合以下のコマンドを実行してください
+```
+$ bundle update
+```
 
 ### ライブラリーのインストール
 ```
